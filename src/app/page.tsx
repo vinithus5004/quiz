@@ -6,9 +6,9 @@ import { questions } from "@/data/questions";
 import { useState } from "react";
 
 function Page(){
-    const [answers, setAnswers] = useState<number[]>([]);
-    const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showResult, setShowResult] = useState(false);
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [answers, setAnswers] = useState<number[]>([]);
 
     const title = 'Assuntos Diversos';
 

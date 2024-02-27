@@ -10,7 +10,7 @@ type Props = {
 export const QuestionItem = ({question, questionCount, onAnswer}: Props) => {
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
 
-    const checkQuestion = (key: number) => {
+    const checkQuestionOption = (key: number) => {
         if(selectedAnswer === null){
             setSelectedAnswer(key);
             setTimeout(() => {
@@ -27,7 +27,7 @@ export const QuestionItem = ({question, questionCount, onAnswer}: Props) => {
                 {question.options.map((item, key) => (
                     <div
                         key={key}
-                        onClick={() => checkQuestion(key)}
+                        onClick={() => checkQuestionOption(key)}
                         className={`border px-3 py-2 rounded-md text-lg mb-4 bg-blue-100 border-blue-300
                         
                             ${selectedAnswer !== null ? 'cursor-auto' : 'cursor-pointer hover:opacity-60'}
